@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Playfair+Display+SC&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(../images/hpbackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Playfair Display SC", serif;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+.hp-characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.character-image,
+.characters {
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.character-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.characters {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  width: 270px;
+  background-color: rgba(179, 179, 179, 0.534);
+}
+
+.error {
+  text-align: center;
+  padding: 10px;
+  width: 400px;
+  color: rgb(116, 8, 8);
+  background-color: rgba(148, 5, 5, 0.171);
+  border: 1px solid rgb(236, 2, 2);
+  box-shadow: 2px 2px 4px 0 rgba(87, 0, 0, 0.3);
+}
