@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter | Contact</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contact</h1>
+        <div class="main-nav">
+            <nav>
+                <ul>
+                  <li><a href="index.html">Return Home</a></li>
+                  <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+              </nav>
+        </div>  
+        </div>
+            <form id="contact">
+                <div id="message"></div>
+                <div>
+                    <label>
+                        Name (required)
+                        <input type="text" name="yourName" id="yourName" />
+                    </label>
+                    <div class="form-error" id="yourNameError">Please enter your name</div>
+                </div>
+
+                <div>
+                    <label>
+                        Subject (minimum length of 10 characters)
+                        <input type="text" name="subject" id="subject" />
+                    </label>
+                    <div class="form-error" id="subjectError">The subject needs to be a minimum of 10 characters</div>
+                </div>
+
+                <div>
+                    <label>
+                        Email (required)
+                        <input type="email" name="email" id="email" />
+                    </label>
+                    <div class="form-error" id="emailError">Please enter your email adress</div>
+                </div>
+
+                <div>
+                    <label>
+                        Address (minimum length of 25 characters)
+                        <input type="text" name="address" id="address" />
+                    </label>
+                    <div class="form-error" id="addressError">The subject needs to be a minimum of 25 characters</div>
+                </div>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+    </div>
+    <script src="js/contact.js"></script> 
+</body>
+</html>
