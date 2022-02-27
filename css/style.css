@@ -90,11 +90,10 @@ a:link {
 }
 
 .characterInfo {
-  color: black;
   text-align: center;
   padding: 10px;
   margin: 0px auto;
-  width: 400px;
+  width: 325px;
   background-color: rgba(179, 179, 179, 0.534);
 }
 
@@ -122,6 +121,11 @@ input {
   padding: 10px;
   background-color: rgba(179, 179, 179, 0.534);
   border: 1px solid black;
+  border-radius: 10px;
+}
+
+input[placeholder] {
+  font-style: italic;
 }
 
 button {
@@ -152,7 +156,7 @@ label {
 .error {
   text-align: center;
   padding: 10px;
-  width: 400px;
+  width: 380px;
   color: rgb(116, 8, 8);
   background-color: rgba(148, 5, 5, 0.171);
   border: 1px solid rgb(116, 8, 8);
@@ -168,6 +172,7 @@ label {
 }
 
 .message {
+  display: none;
   background: rgba(1, 161, 1, 0.459);
   border: 1px solid rgb(0, 126, 27);
   box-shadow: 2px 2px 4px 0 rgba(32, 87, 0, 0.3);
@@ -195,5 +200,15 @@ label {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 400px) {
+  .characterInfo {
+    text-align: center;
+    padding: 10px;
+    margin: 0px auto;
+    width: 400px;
+    background-color: rgba(179, 179, 179, 0.534);
   }
 }

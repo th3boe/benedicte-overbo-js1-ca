@@ -7,7 +7,7 @@ const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
 const email = document.querySelector("#email");
 
-const successMessage = document.querySelector("#message");
+const message = document.querySelector("#successMessage");
 
 function verifyForm(event) {
   event.preventDefault();
@@ -35,19 +35,22 @@ function verifyForm(event) {
   } else {
     emailError.style.display = "block";
   }
-}
 
-function formSubmitted(event) {
-  event.preventDefault();
+  if (
+    valueLength(yourName.value, 0) &&
+    valueLength(subject.value, 9) &&
+    valueLength(address.value, 24) &&
+    verifyEmail(email.value)
+  ) {
+    message.style.display = "block";
 
-  successMessage.innerHTML =
-    '<div class="message">Your Submission was successfull!</div>';
-
-  form.reset();
+    form.reset();
+  } else {
+    message.style.display = "none";
+  }
 }
 
 form.addEventListener("submit", verifyForm);
-form.addEventListener("submit", formSubmitted);
 
 function valueLength(value, span) {
   if (value.trim().length > span) {

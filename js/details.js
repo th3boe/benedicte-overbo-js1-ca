@@ -1,3 +1,5 @@
+const title = document.querySelector("title");
+
 const container = document.querySelector(".characterInfo");
 
 const queryString = document.location.search;
@@ -21,12 +23,13 @@ async function fetchCharacter() {
 
     container.innerHTML = "";
 
+    title.innerHTML = `${data.nickname} | Details`;
+
     container.innerHTML += `<div class="theCharacter">
-                  <img src="${data.image}" class="img" alt="characterImg">
                   <h1>${data.character}</h1>
-                  <h2>Actor: ${data.interpretedBy}</h2>
-                  <p class="info">House: ${data.hogwartsHouse}</p>
-                  <p>Nickname: ${data.nickname}</p>
+                  <img src="${data.image}" class="img" alt="characterImg">
+                  <p>Portrayed by: ${data.interpretedBy}</p>
+                  <p>House: ${data.hogwartsHouse}</p>
                   <p>Children: ${data.child}</p>
                                                   </div>`;
   } catch (error) {
